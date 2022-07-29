@@ -2,3 +2,13 @@
 <div>
   <input type="text"   value="{{endPB | number:'1.2-2' }}">
 </div>
+
+<div>
+  <input type="text" [ngModel]="startPB | number : '1.2-2'" (ngModelChange)="startPB = $event">
+
+  
+
+</div>
+<div>
+  <input type="button"   value="Click" (click)="Save()">
+</div>
