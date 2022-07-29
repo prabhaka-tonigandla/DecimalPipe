@@ -1,12 +1,13 @@
 <h2 *ngFor="let item of item">{{ item.price }}</h2>
 <div>
-  <input type="text"   value="{{endPB | number:'1.2-2' }}">
+  <input type="text"   [ngModel]="endPB">
 </div>
 
 <div>
-  <input type="text" [ngModel]="startPB | number : '1.2-2'" (ngModelChange)="startPB = $event">
-
-  
+  <!-- <label >one way binding</label><input type="text" [ngModel]="startPB | number : '1.2-2'" (ngModelChange)="startPB = $event">
+  <br/> -->
+<label >two way binding</label>
+  <input [(ngModel)]="startPB" />
 
 </div>
 <div>
